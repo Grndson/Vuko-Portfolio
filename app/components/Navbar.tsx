@@ -61,6 +61,7 @@ export default function Navbar() {
               width={35}
               height={35}
               className="rounded-lg object-contain"
+              style={{ width: "auto" }}
               loading="eager"
             />
           </div>

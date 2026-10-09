@@ -6,29 +6,30 @@
 export const siteConfig = {
   name: "Vucore Tech",
   role: "Full-Stack Web Developer",
-  tagline: "Building modern web applications and business systems.",
+  tagline: "Websites and digital tools that help businesses serve customers and get work done.",
   email: "vukoedmund670@gmail.com",
   phone: "+254708201839",
   whatsapp: "https://wa.me/254708201839?text=Hi%20Vucore%20Tech%2C%20I%27d%20like%20to%20discuss%20a%20project.",
   location: "Kenya, East Africa",
   cv: "/assets/cv.pdf",
   socials: {
-    github: "https://github.com/Grndson",       // ← replace
-    linkedin: "", // ← replace
-    instagram: "https://instagram.com/YOUR_USERNAME",  // ← replace
+    github: "https://github.com/Grndson",
+    linkedin: "https://www.linkedin.com/in/edmundvuko/",
+    instagram: "",
   },
 };
 
 export const heroRoles = [
   "Full-Stack Web Developer",
-  "React & PHP Engineer",
-  "MySQL Database Designer",
-  "Freelance Web Consultant",
+  "Business Systems Developer",
+  "Digital Product Builder",
+  "Founder of Vucore Tech",
 ];
 
 export const skills = [
   {
     category: "Frontend",
+    description: "The pages and features people see and use.",
     icon: "Monitor",
     items: [
       { name: "React / Next.js", level: 75 },
@@ -40,6 +41,7 @@ export const skills = [
   },
   {
     category: "Backend",
+    description: "The behind-the-scenes logic that makes an app work.",
     icon: "Server",
     items: [
       { name: "PHP", level: 80 },
@@ -50,6 +52,7 @@ export const skills = [
   },
   {
     category: "Database",
+    description: "How an app stores and organizes information.",
     icon: "Database",
     items: [
       { name: "MySQL", level: 80 },
@@ -60,6 +63,7 @@ export const skills = [
   },
   {
     category: "Tools & DevOps",
+    description: "Tools I use to build, collaborate, and launch projects.",
     icon: "Wrench",
     items: [
       { name: "Git & GitHub", level: 82 },
@@ -72,39 +76,48 @@ export const skills = [
 
 export const projects = [
   {
+  id: "realestate",
+  title: "Opal & Gold Properties",
+  subtitle: "Property website and management tools",
+  category: "fullstack",
+  featured: true,
+  problem: "A real estate agency needed an easy way to showcase properties and respond to interested buyers and renters.",
+  solution: "Built a property website with searchable listings, simple content updates, and tools to manage customer enquiries.",
+  image: "/images/project-realestate.jpg",
+  tech: ["PHP", "MySQL", "JavaScript", "HTML5", "CSS3"],
+  features: [
+  "Search and filter property listings",
+  "Simple property management dashboard",
+  "Update listings, articles, and testimonials",
+  "Keep track of customer enquiries",
+  "Works on phones and computers",
+  "Property photo galleries",
+  "Maps and property locations",
+  "Secure customer enquiry forms"
+  ],
+  liveUrl: "https://opalandgoldproperties.com/",
+  githubUrl: "https://github.com/Grndson/opal-gold",
+  },
+    {
     id: "transocean",
     title: "Transocean Marine Surveyors",
-    subtitle: "Company website with headless CMS",
+    subtitle: "Company website with easy content updates",
     category: "frontend",
     featured: true,
     problem: "A certified marine electronics firm in Kenya had no online presence and was managing client inquiries manually.",
-    solution: "Built a production company website with Sanity headless CMS, allowing the admin to manage all content and images without touching code.",
+    solution: "Built a company website that lets the team update pages, images, and articles without needing to write code.",
     image: "/images/project-marine.jpg",
     tech: ["Next.js", "TypeScript", "Sanity CMS", "Tailwind CSS", "Vercel"],
     features: [
-      "Headless CMS for content management",
-      "Dynamic blog with rich text editor",
-      "Fully editable hero sections per page",
-      "WhatsApp integration and contact form",
-      "SEO optimized with dynamic metadata",
-      "Responsive design across all devices",
+      "Update website content without coding",
+      "Publish news and articles",
+      "Edit content across every page",
+      "WhatsApp and contact form",
+      "Pages designed to be easy to find online",
+      "Works on phones, tablets, and computers",
     ],
-    liveUrl: "https://transocean-website.vercel.app/",
+    liveUrl: "https://www.transoceansurveyors.com/",
     githubUrl: "https://github.com/Grndson/Transocean-Website",
-  },
-  {
-    id: "jobtrack",
-    title: "Job Tracking System",
-    subtitle: "Career management dashboard",
-    category: "fullstack",
-    featured: false,
-    problem: "Job seekers struggled to manage multiple applications, losing track of stages and deadlines across different companies.",
-    solution: "Built a centralized dashboard with a visual pipeline, status tracking, reminders, and analytics for job applications.",
-    image: "/images/project-jobtrack.jpg", 
-    tech: ["PHP", "MySQL", "React", "CSS3"],
-    features: ["Application pipeline", "Interview stage tracking", "Status analytics", "User authentication"],
-    liveUrl: "https://job-tracker-frontend-xi-two.vercel.app/", 
-    githubUrl: "https://github.com/Grndson/job-tracker-frontend", 
   },
   {
     id: "wellness",
@@ -112,27 +125,13 @@ export const projects = [
     subtitle: "Digital health & community app",
     category: "fullstack",
     featured: true,
-    problem: "The owner wanted a to improve on their existing wellness platform with better health tracking, resources, and community features to engage users more effectively.",
-    solution: "Designed and built a full-stack platform with a React frontend consuming a PHP REST API — including doula services, resource library, and community features.",
+    problem: "The owner wanted to improve their wellness platform with better ways for people to track progress, find resources, and connect with others.",
+    solution: "Built a web app where people can track health progress, find wellness resources, access doula services, and connect with a community.",
     image: "/images/project-wellness.jpg",
     tech: ["React", "PHP", "MySQL", "REST API"],
-    features: ["Health metric tracking", "Community feed", "Resource library", "Secure auth"],
+    features: ["Track health progress", "Connect with a community", "Find helpful resources", "Private user accounts"],
     liveUrl: "https://hoa-wellness-frontend.vercel.app/",
     githubUrl: "https://github.com/Grndson/HOA-Wellness-Frontend",
-  },
-  {
-    id: "realestate",
-    title: "Property Hub",
-    subtitle: "Real estate listings website",
-    category: "frontend",
-    featured: false,
-    problem: "Property agents had no digital system to list properties or receive enquiries from potential buyers and tenants.",
-    solution: "Created a listings site with advanced search, price and location filters, a contact/enquiry system, and map integration.",
-    image: "/images/project-realestate.jpg",
-    tech: ["React", "PHP", "MySQL", "Maps API"],
-    features: ["Property search & filter", "Agent enquiry system", "Map integration", "Mobile responsive"],
-    liveUrl: "https://gleeful-crepe-ff52ab.netlify.app/",
-    githubUrl: "https://github.com/Grndson/sevenflags-frontend",
   },
   {
     id: "freelance",
@@ -140,11 +139,11 @@ export const projects = [
     subtitle: "Custom website for videographer",
     category: "freelance",
     featured: false,
-    problem: "A client needed a custom website to establish their online presence and manage content without technical expertise.",
-    solution: "Delivered tailored web solution for a videographer where he will be showcasing his work and sharing his contact information.",
+    problem: "A videographer needed a simple way to showcase their work and help potential clients get in touch.",
+    solution: "Built a custom portfolio website where visitors can explore video work and find contact information.",
     image: "/images/project-freelance.jpg",
     tech: ["React", "CSS3", "JavaScript"],
-    features: ["Custom design", "CMS integration", "SEO optimized", "Fast delivery"],
+    features: ["Designed for the videographer", "Easy content updates", "Easy to find online", "Built for mobile and desktop"],
     liveUrl: "https://rio-portfolio-gold.vercel.app/",
     githubUrl: "https://github.com/Grndson/RIO-Portfolio",
   },
@@ -154,9 +153,9 @@ export const experience = [
   {
     period: "2024 — Present",
     role: "IT Professional & Freelance Developer",
-    company: "Self-Employed / Various Clients",
+    company: "Vucore Tech",
     description:
-      "Working in IT support while actively building and shipping freelance web development projects. Delivering full-stack applications for clients in real estate, health, marine, and business sectors.",
+      "Supporting IT operations while building websites and web applications for clients in real estate, health, marine, and other business sectors.",
     tags: ["React", "PHP", "MySQL", "Client Work", "Freelance"],
   },
   {

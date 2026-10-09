@@ -29,6 +29,7 @@ export default function Footer() {
                   width={35}
                   height={35}
                   className="rounded-lg object-contain"
+                  style={{ width: "auto" }}
                 />
               </div>
               <span className="font-syne font-bold text-base text-[#e0ede8]">
@@ -37,8 +38,8 @@ export default function Footer() {
             </a>
 
             <p className="text-[14px] text-[#5a7a70] leading-relaxed max-w-xs">
-              Full-stack web developer building modern, production-ready
-              applications. Based in Kenya, working globally.
+              I create useful websites and digital tools for businesses. Based in
+              Kenya, working with clients everywhere.
             </p>
 
             <div className="flex gap-3 mt-5">
@@ -47,7 +48,7 @@ export default function Footer() {
                 { icon: FaLinkedinIn, href: siteConfig.socials.linkedin, label: "LinkedIn" },
                 { icon: FaInstagram, href: siteConfig.socials.instagram, label: "Instagram" },
                 { icon: MessageCircle, href: siteConfig.whatsapp, label: "WhatsApp" },
-              ].map(({ icon: Icon, href, label }) => (
+              ].filter(({ href }) => Boolean(href)).map(({ icon: Icon, href, label }) => (
                 <a
                   key={label}
                   href={href}

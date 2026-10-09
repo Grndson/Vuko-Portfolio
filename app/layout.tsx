@@ -4,12 +4,12 @@ import "./globals.css";
 export const metadata: Metadata = {
   title: "Vucore Tech | Software Developer",
   description:
-    "Full-stack developer based in Kenya, building modern web applications with React, Next.js, PHP, and MySQL. Available for full-time roles and freelance projects.",
+    "Edmund Vuko builds websites and digital tools for businesses. Kenya-based, available for freelance projects and software development roles. Experienced with React, Next.js, PHP, and MySQL.",
   keywords: ["software developer", "full stack", "React", "Next.js", "PHP", "MySQL", "Kenya", "Vucore Tech"],
   authors: [{ name: "Vucore Tech" }],
   openGraph: {
     title: "Vucore Tech | Software Developer",
-    description: "Building modern web applications and business systems.",
+    description: "Websites and digital tools that help businesses serve customers and get work done.",
     type: "website",
   },
    icons: {

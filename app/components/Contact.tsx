@@ -125,9 +125,9 @@ export default function Contact() {
                 {[
                   { icon: FaGithub, href: siteConfig.socials.github, label: "GitHub" },
                   { icon: FaLinkedinIn, href: siteConfig.socials.linkedin, label: "LinkedIn" },
-                  { icon: FaInstagram, href: siteConfig.socials.instagram, label: "FaInstagram" },
+                  { icon: FaInstagram, href: siteConfig.socials.instagram, label: "Instagram" },
                   { icon: MessageCircle, href: siteConfig.whatsapp, label: "WhatsApp", red: true },
-                ].map(({ icon: Icon, href, label, red }) => (
+                ].filter(({ href }) => Boolean(href)).map(({ icon: Icon, href, label, red }) => (
                   <a
                     key={label}
                     href={href}

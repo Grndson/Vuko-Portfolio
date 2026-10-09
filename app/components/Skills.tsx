@@ -32,8 +32,8 @@ function SkillBar({ name, level, inView }: { name: string; level: number; inView
   );
 }
 
-function CategoryCard({ category, icon, items, delay }: {
-  category: string; icon: string; items: { name: string; level: number }[]; delay: number;
+function CategoryCard({ category, description, icon, items, delay }: {
+  category: string; description: string; icon: string; items: { name: string; level: number }[]; delay: number;
 }) {
   const ref = useRef<HTMLDivElement>(null);
   const inView = useInView(ref, { once: true, margin: "-60px" });
@@ -54,6 +54,7 @@ function CategoryCard({ category, icon, items, delay }: {
         </div>
         <h3 className="font-syne font-bold text-[1.05rem] text-[#e0ede8]">{category}</h3>
       </div>
+      <p className="text-[13px] text-[#9ab5aa] leading-relaxed mb-5">{description}</p>
       <div className="flex flex-col gap-4">
         {items.map((item) => (
           <SkillBar key={item.name} name={item.name} level={item.level} inView={inView} />
@@ -70,9 +71,11 @@ export default function Skills() {
         <motion.div {...fadeUp(0)} className="mb-14">
           <span className="font-mono text-[11px] tracking-[0.18em] uppercase text-[#cc1000]">02 / Skills</span>
           <h2 className="font-syne font-black text-[clamp(2rem,4vw,2.8rem)] tracking-tight text-[#e0ede8] mt-2">
-            Tech Stack
+            Skills & Tools
           </h2>
-          <p className="text-[15px] text-[#9ab5aa] mt-2">Tools and technologies I work with.</p>
+          <p className="text-[15px] text-[#9ab5aa] mt-2">
+            What I can help you build, plus the technologies I use to make it happen.
+          </p>
         </motion.div>
 
         <div className="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-4 gap-5">
@@ -80,6 +83,7 @@ export default function Skills() {
             <CategoryCard
               key={group.category}
               category={group.category}
+              description={group.description}
               icon={group.icon}
               items={group.items}
               delay={i * 0.1}
@@ -89,7 +93,7 @@ export default function Skills() {
 
         {/* Tech pill cloud */}
         <motion.div {...fadeUp(0.4)} className="mt-12 pt-10 border-t border-white/06">
-          <p className="font-mono text-[11px] tracking-[0.14em] uppercase text-[#5a7a70] mb-5">Also familiar with</p>
+          <p className="font-mono text-[11px] tracking-[0.14em] uppercase text-[#5a7a70] mb-5">Also used</p>
           <div className="flex flex-wrap gap-2">
             {["Bootstrap", "jQuery", "cPanel", "Figma", "Postman", "XAMPP", "phpMyAdmin", "Netlify", "Vercel", "GitHub Pages"].map((tech) => (
               <span

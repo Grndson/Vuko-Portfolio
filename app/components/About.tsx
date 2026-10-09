@@ -21,7 +21,7 @@ export default function About() {
         <motion.div {...fadeUp(0)} className="mb-14">
           <span className="font-mono text-[11px] tracking-[0.18em] uppercase text-[#cc0000]">01 / About</span>
           <h2 className="font-syne font-black text-[clamp(2rem,4vw,2.8rem)] tracking-tight text-[#e0ede8] mt-2">
-            Who I Am
+            A Developer Who Understands Business
           </h2>
         </motion.div>
 
@@ -32,7 +32,13 @@ export default function About() {
             <div className="w-full aspect-square max-w-[300px] rounded-2xl border border-white/10 bg-[#111815] overflow-hidden relative flex items-center justify-center">
               
               
-              <Image src="/images/profile.png" alt="Vucore Tech" fill className="object-cover" />
+              <Image
+                src="/images/profile.png"
+                alt="Edmund Vuko"
+                fill
+                sizes="300px"
+                className="object-cover"
+              />
               
             </div>
 
@@ -41,9 +47,9 @@ export default function About() {
               {[
                 { icon: FaGithub, href: siteConfig.socials.github, label: "GitHub" },
                 { icon: FaLinkedinIn, href: siteConfig.socials.linkedin, label: "LinkedIn" },
-                { icon: FaInstagram, href: siteConfig.socials.instagram, label: "FaInstagram" },
+                { icon: FaInstagram, href: siteConfig.socials.instagram, label: "Instagram" },
                 { icon: MessageCircle, href: siteConfig.whatsapp, label: "WhatsApp", red: true },
-              ].map(({ icon: Icon, href, label, red }) => (
+              ].filter(({ href }) => Boolean(href)).map(({ icon: Icon, href, label, red }) => (
                 <a
                   key={label}
                   href={href}
@@ -69,9 +75,9 @@ export default function About() {
             </motion.p>
 
             {[
-              "I'm a passionate web developer based in Kenya with a Bachelor's degree in Business Information Technology. I specialise in building clean, fast, and scalable web applications — from intuitive front-end interfaces to robust back-end systems.",
-              "Currently working in IT while actively growing my development skills and freelance portfolio. I love solving real-world problems through code and delivering digital solutions that make a genuine impact.",
-              "My approach combines technical precision with business understanding — I don't just build software, I build tools that serve real user needs and drive results.",
+              "I'm a Kenya-based web developer with a degree in Business Information Technology. I build websites and online tools that help businesses present their work, serve customers, and manage day-to-day tasks.",
+              "Alongside my IT support work, I build projects for clients in real estate, health, and marine services. I can take a project from the first conversation through design, development, and launch.",
+              "For hiring teams, I bring hands-on experience with React, Next.js, PHP, and MySQL, as well as a business-focused approach to solving problems and working with people.",
             ].map((text, i) => (
               <motion.p
                 key={i}

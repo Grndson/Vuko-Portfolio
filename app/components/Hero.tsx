@@ -60,7 +60,7 @@ export default function Hero() {
               style={{ animation: "badge-pulse 2s infinite" }}
             />
             <span className="font-mono text-[11px] tracking-[0.18em] uppercase text-[#9ab5aa] border border-[#00ff87]/15 px-3 py-1 rounded-full bg-[#0d1210]">
-              Available for work
+              Open to work and projects
             </span>
           </motion.div>
 
@@ -91,18 +91,19 @@ export default function Hero() {
             {...fadeUp(0.3)}
             className="text-[15px] text-[#9ab5aa] leading-relaxed max-w-[500px] mb-8 border-l-2 border-[#cc0000]/30 pl-4"
           >
-            Founder of VucoreTech & full-stack developer building modern,
-  production-ready applications.
+            I build websites and digital tools that help businesses reach customers
+            and get work done. I also bring hands-on experience with React, PHP,
+            and MySQL to engineering teams.
           </motion.p>
 
           {/* CTAs */}
-          <motion.div {...fadeUp(0.35)} className="flex flex-wrap gap-3 mb-10">
+          <motion.div {...fadeUp(0.35)} className="flex flex-wrap gap-3">
             <a
               href="#projects"
               onClick={(e) => { e.preventDefault(); document.querySelector("#projects")?.scrollIntoView({ behavior: "smooth" }); }}
               className="inline-flex items-center gap-2 bg-[#cc0000] text-white font-mono font-bold text-[12px] tracking-wider uppercase px-6 py-3 rounded-lg hover:bg-[#a50000] hover:-translate-y-[2px] hover:shadow-[0_8px_24px_rgba(204,0,0,0.25)] transition-all"
             >
-              View Projects
+              See My Work
             </a>
             <a
               href={siteConfig.whatsapp}
@@ -110,28 +111,8 @@ export default function Hero() {
               rel="noopener noreferrer"
               className="inline-flex items-center gap-2 font-mono text-[12px] tracking-wider uppercase text-[#cc0000] border border-[#cc0000]/25 px-6 py-3 rounded-lg hover:bg-[#cc0000]/08 hover:border-[#cc0000]/50 hover:-translate-y-[2px] transition-all"
             >
-              <MessageCircle size={14} /> WhatsApp Me
+              <MessageCircle size={14} /> Start a Conversation
             </a>
-          </motion.div>
-
-          {/* Stats */}
-          <motion.div
-            {...fadeUp(0.4)}
-            className="flex items-center gap-6 pt-6 border-t border-white/06"
-          >
-            {[
-              { num: "5+", label: "Projects" },
-              { num: "4+", label: "Tech Stacks" },
-              { num: "2+", label: "Years Building" },
-            ].map((s, i) => (
-              <div key={i} className="flex items-center gap-6">
-                <div>
-                  <div className="font-syne font-black text-[1.8rem] text-[#cc0000] leading-none">{s.num}</div>
-                  <div className="font-mono text-[10px] tracking-[0.14em] uppercase text-[#5a7a70] mt-1">{s.label}</div>
-                </div>
-                {i < 2 && <div className="w-px h-9 bg-white/08" />}
-              </div>
-            ))}
           </motion.div>
         </div>
 
@@ -151,12 +132,12 @@ export default function Hero() {
               <span className="font-mono text-[11px] text-[#5a7a70] ml-2">vucore@dev ~ </span>
             </div>
             <div className="p-4 font-mono text-[13px] leading-[1.9]">
-              <p><span className="text-[#cc0000]">$</span><span className="text-[#9ab5aa] ml-2">whoami</span></p>
-              <p className="text-[#5a7a70] pl-4">Full-Stack Web Developer</p>
+              <p><span className="text-[#cc0000]">$</span><span className="text-[#9ab5aa] ml-2">what I build</span></p>
+              <p className="text-[#5a7a70] pl-4">Websites & useful business tools</p>
               <p className="mt-1"><span className="text-[#cc0000]">$</span><span className="text-[#9ab5aa] ml-2">location</span></p>
               <p className="text-[#5a7a70] pl-4">Kenya, East Africa 🌍</p>
-              <p className="mt-1"><span className="text-[#cc0000]">$</span><span className="text-[#9ab5aa] ml-2">status</span></p>
-              <p className="text-[#cc0000] pl-4">● Open to opportunities</p>
+              <p className="mt-1"><span className="text-[#cc0000]">$</span><span className="text-[#9ab5aa] ml-2">how I work</span></p>
+              <p className="text-[#cc0000] pl-4">● Clear, collaborative, reliable</p>
               <p className="mt-1">
                 <span className="text-[#cc0000]">$</span>
                 <span className="cursor-blink text-[#cc0000] ml-1">_</span>

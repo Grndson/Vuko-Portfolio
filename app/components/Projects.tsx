@@ -7,10 +7,10 @@ import { projects } from "../lib/data";
 import Image from "next/image";
 
 const filters = [
-  { label: "All", value: "all" },
-  { label: "Full Stack", value: "fullstack" },
-  { label: "Frontend", value: "frontend" },
-  { label: "Freelance", value: "freelance" },
+  { label: "All Work", value: "all" },
+  { label: "Web Applications", value: "fullstack" },
+  { label: "Websites", value: "frontend" },
+  { label: "Client Work", value: "freelance" },
 ];
 
 const fadeUp = (delay = 0) => ({
@@ -34,7 +34,9 @@ export default function Projects() {
           <h2 className="font-syne font-black text-[clamp(2rem,4vw,2.8rem)] tracking-tight text-[#e0ede8] mt-2">
             What I&apos;ve Built
           </h2>
-          <p className="text-[15px] text-[#9ab5aa] mt-2">Real projects solving real problems.</p>
+          <p className="text-[15px] text-[#9ab5aa] mt-2">
+            A look at the websites and digital tools I&apos;ve built for real businesses and their customers.
+          </p>
         </motion.div>
 
         {/* Filters */}
@@ -89,7 +91,7 @@ export default function Projects() {
                         rel="noopener noreferrer"
                         className="flex items-center gap-2 bg-[#cc1000] text-black font-mono font-bold text-[11px] tracking-wider uppercase px-4 py-2 rounded-lg hover:bg-[#a80d00] transition-all"
                       >
-                        <ExternalLink size={12} /> Live
+                        <ExternalLink size={12} /> Visit Website
                       </a>
                     )}
                     {project.githubUrl !== "#" && (
@@ -99,7 +101,7 @@ export default function Projects() {
                         rel="noopener noreferrer"
                         className="flex items-center gap-2 text-[#e0ede8] border border-white/20 bg-[#111815] font-mono text-[11px] tracking-wider uppercase px-4 py-2 rounded-lg hover:bg-[#161f1c] transition-all"
                       >
-                        <FaGithub size={12} /> Code
+                        <FaGithub size={12} /> Source Code
                       </a>
                     )}
                   </div>
@@ -114,45 +116,47 @@ export default function Projects() {
 
                 {/* Body */}
                 <div className="p-5 flex flex-col flex-1">
-                  {/* Tags */}
-                  <div className="flex flex-wrap gap-1 mb-3">
-                    {project.tech.map((t) => (
-                      <span
-                        key={t}
-                        className="font-mono text-[10px] tracking-wider uppercase text-[#cc1000] bg-[#cc1000]/06 border border-[#cc1000]/15 px-2 py-[2px] rounded-full"
-                      >
-                        {t}
-                      </span>
-                    ))}
-                  </div>
-
                   <h3 className="font-syne font-bold text-[1.1rem] text-[#e0ede8] mb-1 leading-tight">
                     {project.title}
                   </h3>
-                  <p className="font-mono text-[11px] text-[#5a7a70] tracking-wider uppercase mb-3">
+                  <p className="text-[12px] text-[#5a7a70] mb-3">
                     {project.subtitle}
                   </p>
 
-                  {/* Problem → Solution */}
                   <div className="mb-4 space-y-2 flex-1">
                     <div className="text-[12px] leading-relaxed">
-                      <span className="font-mono text-[10px] text-[#cc1000] tracking-wider uppercase">Problem: </span>
+                      <span className="font-semibold text-[#cc1000]">The need: </span>
                       <span className="text-[#9ab5aa]">{project.problem}</span>
                     </div>
                     <div className="text-[12px] leading-relaxed">
-                      <span className="font-mono text-[10px] text-[#cc1000] tracking-wider uppercase">Solution: </span>
+                      <span className="font-semibold text-[#cc1000]">What I built: </span>
                       <span className="text-[#9ab5aa]">{project.solution}</span>
                     </div>
                   </div>
 
-                  {/* Features */}
-                  <div className="grid grid-cols-2 gap-1 pt-4 border-t border-white/06">
+                  <div className="grid grid-cols-1 sm:grid-cols-2 gap-2 pt-4 border-t border-white/06">
                     {project.features.map((f) => (
                       <div key={f} className="flex items-center gap-2">
                         <CheckCircle2 size={11} className="text-[#cc1000] shrink-0" />
-                        <span className="font-mono text-[11px] text-[#5a7a70]">{f}</span>
+                        <span className="text-[11px] text-[#9ab5aa]">{f}</span>
                       </div>
                     ))}
+                  </div>
+
+                  <div className="mt-4 pt-3 border-t border-white/06">
+                    <p className="font-mono text-[10px] tracking-wider uppercase text-[#5a7a70] mb-2">
+                      Built with
+                    </p>
+                    <div className="flex flex-wrap gap-1">
+                      {project.tech.map((tech) => (
+                        <span
+                          key={tech}
+                          className="font-mono text-[10px] tracking-wider uppercase text-[#cc1000] bg-[#cc1000]/06 border border-[#cc1000]/15 px-2 py-[2px] rounded-full"
+                        >
+                          {tech}
+                        </span>
+                      ))}
+                    </div>
                   </div>
                 </div>
               </motion.div>
